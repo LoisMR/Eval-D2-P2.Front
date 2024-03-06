@@ -12,7 +12,6 @@ export class EventComponent {
 
   events: EventEntity[] = [];
   isLoading: boolean = true;
-  isError: boolean = false;
   errorMessage: String = '';
 
   constructor(
@@ -22,7 +21,6 @@ export class EventComponent {
 
 
   ngOnInit() {
-    console.log("init");
     this.getAll();
   }
 
@@ -34,7 +32,6 @@ export class EventComponent {
         this.events = data;
       },
       error: (response) => {
-        this.isError = true;
         this.errorMessage = response.error;
       },
       complete: () => {

@@ -16,4 +16,15 @@ export class EventService {
       map((data: any) => data.events as EventEntity[])
     );
   }
+
+  createEvent(event: EventEntity) {
+    var body = {
+      Title: event.Title,
+      Description: event.Description,
+      Date: event.Date,
+      Location: event.Location,
+    };
+
+    return this.http.post(`${environment.apiUrl}events`, body);
+  }
 }

@@ -6,11 +6,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventComponent } from './event/event/event.component';
+import { EventCreateComponent } from './event/event-create/event-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventComponent
+    EventComponent,
+    EventCreateComponent
   ],
   imports: [
     BrowserModule,

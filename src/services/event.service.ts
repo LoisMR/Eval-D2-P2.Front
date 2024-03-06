@@ -27,4 +27,19 @@ export class EventService {
 
     return this.http.post(`${environment.apiUrl}events`, body);
   }
+
+  editEvent(event: EventEntity, id:String) {
+    var body = {
+      Title: event.Title,
+      Description: event.Description,
+      Date: event.Date,
+      Location: event.Location,
+    };
+
+    return this.http.put(`${environment.apiUrl}events/${id}`, body);
+  }
+
+  deleteEvent(id: string) {
+    return this.http.delete(`${environment.apiUrl}/events/${id}`);
+  }
 }

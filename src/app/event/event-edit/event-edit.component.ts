@@ -12,6 +12,7 @@ import { EventEntity } from '../../../model/event';
 export class EventEditComponent {
   eventId: String = '';
   formSubmitted = false;
+  isDivVisible = false;
   errorMessage: String = '';
   eventForm: FormGroup = this.fb.group({
     Title: ['', Validators.required],

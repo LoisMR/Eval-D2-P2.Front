@@ -14,7 +14,7 @@ import { EventEditComponent } from './event/event-edit/event-edit.component';
     AppComponent,
     EventComponent,
     EventCreateComponent,
-    EventEditComponent
+    EventEditComponent,
   ],
   imports: [
     BrowserModule,

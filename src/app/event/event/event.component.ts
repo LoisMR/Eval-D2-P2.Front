@@ -39,4 +39,10 @@ export class EventComponent {
       }
     });
   }
+
+  deleteEvent(id: string) {
+    this.eventService.deleteEvent(id).subscribe(() => {
+      this.getAll();
+    });
+  }
 }
